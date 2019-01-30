@@ -1,0 +1,22 @@
+.list-align {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background: white;
+    height: auto;
+    width: 80vw;
+    margin-bottom: 30px;
+    .product-item{
+        border-bottom: 1px solid lightgray;
+    }
+}
+.alert{
+    width:83.33%;
+    color:white;
+    background: #9b69bf;
+    text-align: center;
+}

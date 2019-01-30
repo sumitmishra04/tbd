@@ -1,0 +1,35 @@
+<div class="row product">
+  <div class="product-image col-md-1">
+    <img [src]="product.imageUrl" class="img" alt="">
+  </div>
+  <div class="product-details col-md-3">
+    <div *ngIf="product.tagline" class="product-tagline">{{product?.tagline}}</div>
+    <div class="product-name">{{product?.name}}</div>
+    <div class="product-desc">
+      <span *ngFor="let line of product.description">
+        {{line}}
+        <br>
+      </span>
+    </div>
+    <div class="product-plan" *ngIf="product?.planLink">
+      <a class="product-plan-link " [href]="product?.planLink">View Plans</a></div>
+  </div>
+  <div class="price offset-md-1 col-md-2">{{product?.price}} $</div>
+  <div class="quantity col-md-2">1</div>
+  <div class="subtotal col-md-2">{{product?.price}}</div>
+
+</div>
+<div class="row gift" *ngIf="product?.gift">
+  <div class="product-image  col-md-1">
+    <img src="../../../assets/Images/stick.png" alt="" class="img">
+  </div>
+  <div class="product-details gift-card col-md-3">
+    <div class="">
+      <div class="product-tagline gift-tag">GIFT</div>
+      <div class="product-name">{{product.gift.name}}</div>
+      <div class="product-desc">{{product.gift.desc}}</div>
+    </div>
+  </div>
+  <div class="offset-md-1 col-md-2">{{product.gift.price}} $</div>
+  <div class="col-md-3">1</div>
+</div>
